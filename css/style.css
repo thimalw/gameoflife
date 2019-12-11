@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #221a3f;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-header {
+    width: 100%;
+    height: 60px;
+    background-color: #150e2e;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.2);
+}
+
+.main-header .branding {
+    color: #fff;
+    font-family: 'Satisfy', sans-serif;
+    font-size: 20px;
+    cursor: default;
+}
+
+.main-header .header-actions {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.main-header .header-actions .btn {
+    display: block;
+    padding: 7px 20px;
+    background-color: transparent;
+    font-size: 14px;
+    border-radius: 5px;
+    color: #c0aafa;
+    background-color: #2d234b;
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.main-header .header-actions .btn+.btn {
+    margin-left: 10px;
+}
+
+.main-header .header-actions .btn:hover {
+    color: #fff;
+    background-color: #6752a7;
+}
+
+.main-header .header-actions .btn:active {
+    background-color: #755bc4;
+}
+
+.grid-container {
+    padding: 30px 15px;
+}
+
+#grid {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+    box-shadow: 0 18px 30px -14px rgba(0, 0, 0, 0.2);
+}
+
+#grid td {
+    position: relative;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #48348a;
+}
+
+#grid td::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#grid.initialized td.dead::before {
+    background-color: #2e2450;
+}
+
+#grid.initialized td.live::before {
+    background-color: #35e3f0;
+    animation-name: liveEnter;
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+}
+
+@keyframes liveEnter {
+    0% {
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
