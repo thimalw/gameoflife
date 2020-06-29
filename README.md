@@ -6,6 +6,9 @@ As described on [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Lif
 
 This is just a small project created to test Browserify that perhaps went a tad too far.
 
+## Demo
+[https://gameoflife.thimal.me/](https://gameoflife.thimal.me/)
+
 ## Setup
 ### Install Dependencies
 ```
